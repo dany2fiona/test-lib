@@ -1,7 +1,7 @@
 package com.example.dany.retrofitdemo.model;
 
 /**
- * Created by user on 2016/8/25.
+ * Created by dan.y on 2016/8/25.
  */
 public class RecievedIdentityCard {
     private int showapi_res_code;
