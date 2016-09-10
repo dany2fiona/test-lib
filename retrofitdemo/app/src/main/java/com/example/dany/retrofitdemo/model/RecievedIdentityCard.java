@@ -33,7 +33,7 @@ public class RecievedIdentityCard {
     }
 
 
-    static class ShowApiResBody {
+    public static class ShowApiResBody {
         private int errNum;
         private IdentityCard retData;
         private String retMsg;
@@ -72,7 +72,7 @@ public class RecievedIdentityCard {
         }
 
 
-        static class IdentityCard {
+      public  static class IdentityCard {
             private String address;
             private String birthday;
             private String sex;

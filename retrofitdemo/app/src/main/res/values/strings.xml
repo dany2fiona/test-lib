@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">retrofitdemo</string>
+
+    <string name="tip_identity_card">身份证信息查询</string>
+    <string name="hint_identity_card">请输入一个有效的身份证</string>
+    <string name="query">查询</string>
 </resources>

@@ -8,10 +8,64 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".view.MainActivity">
-
-    <TextView
-        android:id="@+id/tv_show"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/ll_query"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tip_identity_card"
+            android:textSize="@dimen/size_normal"
+            />
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_normal"
+            android:hint="@string/hint_identity_card"
+            />
+        <Button
+            android:id="@+id/btn_query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_normal"
+            android:text="@string/query"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/ll_query"
+        android:id="@+id/ll_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_normal"
+            />
+        <TextView
+            android:id="@+id/tv_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_normal"
+            />
+        <TextView
+            android:id="@+id/tv_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_normal"
+            />
+
+
+    </LinearLayout>
+
 </RelativeLayout>

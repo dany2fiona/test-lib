@@ -8,9 +8,9 @@ import com.example.dany.retrofitdemo.model.RecievedIdentityCard;
  */
 public interface RecievedIdentityCardContract {
     interface View extends BaseView{
-        void showInfo(RecievedIdentityCard bean);
+        void showInfo(RecievedIdentityCard.ShowApiResBody.IdentityCard bean);
     }
     interface Presenter extends BasePresenter{
-        void loadInfo();
+        void loadInfo(String id);
     }
 }
