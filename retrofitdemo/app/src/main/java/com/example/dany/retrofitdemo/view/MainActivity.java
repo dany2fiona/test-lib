@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.example.dany.retrofitdemo.Contract.RecievedIdentityCardContract;
 import com.example.dany.retrofitdemo.Presenter.RecievedIdentityCardPresenter;
 import com.example.dany.retrofitdemo.R;
+import com.example.dany.retrofitdemo.greendao.Manager.IdentityCardDaoManager;
 import com.example.dany.retrofitdemo.model.RecievedIdentityCard;
 
 import butterknife.BindView;
@@ -74,9 +75,13 @@ public class MainActivity extends AppCompatActivity implements RecievedIdentityC
             mAddressTv.setText("地址："+bean.getAddress());
             mBirthdayTv.setText("生日："+bean.getBirthday());
             mSexTv.setText("性别："+(bean.getSex().equals("M")?"男":"女"));
+            IdentityCardDaoManager.getInstance().insertIdentityCard(null,mIdentityCardId,
+                    bean.getAddress(),bean.getBirthday(),bean.getSex());
         }else{
             Toast.makeText(this, "无此证件号", Toast.LENGTH_SHORT).show();
             mResultLl.setVisibility(View.GONE);
+            IdentityCardDaoManager.getInstance().insertIdentityCard(null,mIdentityCardId,
+                    "无","无","无");
         }
     }
 
