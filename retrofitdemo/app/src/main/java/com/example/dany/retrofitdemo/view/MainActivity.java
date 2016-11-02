@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements RecievedIdentityC
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         new RecievedIdentityCardPresenter(this);
+
     }
 
     @Override

@@ -19,7 +19,8 @@ public class ShowService {
 
     public static ShowAPI createService(){
         Retrofit.Builder builder = new Retrofit.Builder()
-                            .baseUrl("http://route.showapi.com/")
+//                            .baseUrl("http://route.showapi.com/")
+                            .baseUrl("http://222.73.0.213:8300/")
                             .addConverterFactory(GsonConverterFactory.create())
                             .addCallAdapterFactory(RxJavaCallAdapterFactory.create());
 
@@ -35,6 +36,5 @@ public class ShowService {
         builder.client(client);
         return builder.build().create(ShowAPI.class);
     }
-
 
 }
